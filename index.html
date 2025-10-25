@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Rigger Damaiarta Tejayanda</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Estetik & Profesional */
+        :root {
+            --font-utama: 'Poppins', sans-serif;
+            --font-judul: 'Caveat', cursive;
+            --warna-teal: #00aabf;
+            --warna-teks: #333333;
+            --warna-latar: #f8f9fa;
+            --warna-putih: #ffffff;
+            --bayangan: 0 10px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-utama);
+            line-height: 1.7;
+            background-color: var(--warna-latar);
+            color: var(--warna-teks);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- Navigasi --- */
+        nav.navbar {
+            background: var(--warna-putih);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 15px 40px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav.navbar .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--warna-teks);
+            text-decoration: none;
+        }
+
+        nav.navbar ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav.navbar ul li a {
+            text-decoration: none;
+            color: var(--warna-teks);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav.navbar ul li a:hover {
+            color: var(--warna-teal);
+        }
+
+        /* --- Kontainer Utama --- */
+        main.container {
+            max-width: 1100px;
+            margin: 100px auto 30px auto; /* Margin atas untuk navbar fixed */
+            background-color: var(--warna-putih);
+            border-radius: 12px;
+            box-shadow: var(--bayangan);
+            overflow: hidden;
+        }
+
+        /* --- Bagian Konten (Per Slide) --- */
+        section {
+            padding: 60px 50px;
+            border-bottom: 1px solid #eee;
+        }
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        /* Judul Estetik (seperti 'Summary' di PDF) */
+        h2.section-title {
+            font-family: var(--font-judul);
+            font-size: 3.5rem;
+            color: var(--warna-teal);
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+        
+        h3.section-subtitle {
+            font-family: var(--font-utama);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--warna-teks);
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--warna-teal);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* --- 1. Hero (Slide 1) --- */
+        section#hero {
+            background-color: var(--warna-teks);
+            color: var(--warna-putih);
+            text-align: center;
+            padding: 100px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+
+        section#hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        section#hero p.subtitle {
+            font-family: var(--font-judul);
+            font-size: 2rem;
+            color: var(--warna-teal);
+            margin: 10px 0 0 0;
+        }
+
+        /* --- 2. Summary (Slide 2) --- */
+        section#summary .content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        section#summary .summary-text {
+            flex: 2;
+        }
+        section#summary .summary-text h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--warna-teks);
+            margin-top: 0;
+        }
+        section#summary .summary-text p {
+            font-size: 1rem;
+            color: #555;
+        }
+        section#summary .summary-image {
+            flex: 1;
+            text-align: center;
+        }
+        section#summary .summary-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid var(--warna-putih);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        /* --- 3. Pendidikan (Slide 3) --- */
+        section#pendidikan .edu-list {
+            list-style: none;
+            padding: 0;
+        }
+        section#pendidikan .edu-item {
+            padding-left: 30px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        section#pendidikan .edu-item::before {
+            content: '🎓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2rem;
+        }
+        section#pendidikan .edu-item strong {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--warna-teks);
+        }
+        section#pendidikan .edu-item span {
+            font-size: 1rem;
+            color: #777;
+            display: block;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--bayangan);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- 4. Pengalaman Kerja (Slide 4-7) --- */
+        .job-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed #ddd;
+        }
+        .job-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .job-item h3.job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--warna-teks);
+            margin: 0;
+        }
+        .job-item h4.company {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--warna-teal);
+            margin: 5px 0 10px 0;
+            font-style: italic;
+        }
+        .job-item p.date {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #888;
+            margin-bottom: 15px;
+        }
+        .job-item ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        .job-item li {
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        /* --- 5. Sertifikasi (Slide 8-9) --- */
+        .certificate-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .certificate-item {
+            text-align: center;
+        }
+        .certificate-item img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            box-shadow: var(--bayangan);
+            transition: all 0.3s ease;
+        }
+        .certificate-item img:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        .certificate-item p {
+            font-weight: 600;
+            margin-top: 15px;
+            color: var(--warna-teks);
+        }
+
+        /* --- 6. Proyek (Slide 10-12) --- */
+        .project-item {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        .project-image {
+            flex: 1;
+        }
+        .project-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--bayangan);
+        }
+        .project-description {
+            flex: 2;
+        }
+        .project-description h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+        }
+        .project-description p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* --- 7. Kepemimpinan (Slide 13) --- */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        .leadership-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 5px solid var(--warna-teal);
+            box-shadow: var(--bayangan);
+        }
+        .leadership-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 10px 0 5px 0;
+        }
+        .leadership-item p {
+            font-size: 0.95rem;
+            color: #777;
+            margin: 0;
+        }
+
+        /* --- 8. Footer/Kontak (Slide 14) --- */
+        footer {
+            background-color: var(--warna-teks);
+            color: var(--warna-putih);
+            text-align: center;
+            padding: 50px 40px;
+        }
+        footer h2.closing {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 30px 0;
+        }
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .contact-info li {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #eee;
+        }
+        
+        /* --- Responsif --- */
+        @media (max-width: 768px) {
+            nav.navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+            nav.navbar ul {
+                margin-top: 10px;
+                gap: 15px;
+            }
+            main.container {
+                margin: 130px 15px 15px 15px;
+            }
+            section {
+                padding: 40px 25px;
+            }
+            section#summary .content-wrapper,
+            .project-item {
+                flex-direction: column;
+            }
+            .certificate-gallery,
+            .leadership-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#hero" class="logo">Rigger Damaiarta Tejayanda</a>
+        <ul>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#pendidikan">Pendidikan</a></li>
+            <li><a href="#pengalaman">Pengalaman</a></li>
+            <li><a href="#proyek">Proyek</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <section id="hero">
+            <h1>RIGGER DAMAIARTA TEJAYANDA</h1> <p class="subtitle"></p> </section>
+
+        <section id="summary">
+            <h2 class="section-title">Summary</h2> <div class="content-wrapper">
+                <div class="summary-text">
+                    <h4>SAYA RIGGER DAMAIARTA TEJAYANDA</h4> <p>Lulusan Teknik Informatika dengan IPK 3.80 yang memiliki antusiasme tinggi untuk mempelajari hal baru dan fokus sebagai pemecah masalah yang sistematis.</p> <p>Terbiasa menganalisis dan memberikan solusi teknis di lingkungan serba cepat, serta mampu bekerja dengan target dan tenggat waktu ketat untuk memastikan kelancaran operasional.</p> <p>Memiliki pengalaman dalam mengoordinasi tim, merancang materi pelatihan, mengelola platform digital, dan menyusun dokumentasi teknis secara teliti, siap berkontribusi aktif dalam lingkungan kerja yang dinamis.</p> </div>
+                <div class="summary-image">
+                    <img src="WhatsApp Image 2025-05-27 at 11.29.39_f0b1bc06 - Copy.jpg" alt="Foto Rigger Damaiarta Tejayanda">
+                </div>
+            </div>
+        </section>
+
+        <section id="pendidikan">
+            <h2 class="section-title">Pendidikan</h2> <ul class="edu-list">
+                <li class="edu-item">
+                    <strong>Universitas Buana Perjuangan Karawang</strong> <span>2021-2025</span> <span>Teknik Informatika - IPK 3.80</span> </li>
+                <li class="edu-item">
+                    <strong>SMA Negeri 3 Karawang</strong> <span>2018-2021</span> <span>MIPA</span> </li>
+            </ul>
+            <div class="image-gallery">
+                <img src="WhatsApp Image 2025-07-30 at 00.45.44_ebf912bd.jpg" alt="Foto Wisuda">
+                <img src="WhatsApp Image 2025-10-25 at 18.46.47_9c3cf36e.jpg" alt="Foto Topi Toga">
+                <img src="WhatsApp Image 2025-10-25 at 18.46.47_d7099459.jpg" alt="Foto Kampus">
+            </div>
+        </section>
+
+        <section id="pengalaman">
+            <h2 class="section-title">Pengalaman Kerja</h2> <article class="job-item">
+                <h3 class="job-title">SECOND LAYER IT OPERATIONS FSS (CONTRACTOR VIA KANO TEKNOLOGI)</h3> <h4 class="company">PT HM SAMPOERNA TBK, KARAWANG</h4> <p class="date">JUL 2024 - PRESENT</p> <ul>
+                    <li>Bertanggung jawab sebagai L2 Support untuk aplikasi manufaktur kritis (iMEL), melakukan troubleshooting (aplikasi, database, sistem) dan mendukung proyek IT Resiliency (Backup, Restore, DR).</li> <li>Berkolaborasi aktif dalam bahasa Inggris dengan tim multinasional untuk menyelesaikan case dan proyek teknis.</li> </ul>
+            </article>
+
+            <article class="job-item">
+                <h3 class="job-title">CUSTOMER SERVICE INTERN</h3> <h4 class="company">UNIVERSITAS BUANA PERJUANGAN, KARAWANG</h4> <p class="date">SEP 2024 - JUN 2025</p> <ul>
+                    <li>Mengelola platform e-learning (Buana Online Course), memberikan support teknis kepada pengguna dan memastikan kelancaran operasional.</li> <li>Merekapitulasi dan menganalisis data e-learning (pengguna & kursus) menggunakan Excel & Google Sheets untuk mendukung peningkatan layanan.</li> </ul>
+            </article>
+
+            <article class="job-item">
+                <h3 class="job-title">IT SUPPORT</h3> <h4 class="company">KOMISI PEMILIHAN UMUM DAERAH, KARAWANG</h4> <p class="date">MAY - JUN 2024</p> <ul>
+                    <li>Memastikan kelancaran operasional seluruh infrastruktur teknis untuk tes berbasis komputer (CAT).</li> <li>Memberikan dukungan teknis dan melakukan troubleshooting pada lebih dari 40 unit PC selama tes berlangsung.</li> </ul>
+            </article>
+
+            <article class="job-item">
+                <h3 class="job-title">ASISTEN DOSEN ANALISIS DESAIN BERORIENTASI OBJEK</h3> <h4 class="company">UNIVERSITAS BUANA PERJUANGAN, KARAWANG</h4> <p class="date">SEP 2024 - JAN 2025</p> <ul>
+                    <li>Membimbing mahasiswa dalam praktikum dan memimpin sesi perkuliahan secara mandiri saat dosen berhalangan.</li> <li>Mendukung dosen dalam penyiapan materi ajar serta memberikan support teknis (jaringan & software) kepada mahasiswa.</li> </ul>
+            </article>
+
+            <article class="job-item">
+                <h3 class="job-title">ASISTEN LABORATORIUM PEMROGRAMAN DASAR</h3> <h4 class="company">UNIVERSITAS BUANA PERJUANGAN, KARAWANG</h4> <p class="date">FEB - JUN 2024</p> <ul>
+                    <li>Membimbing praktikum Pemrograman Dasar (Python), berfokus membangun pemahaman fundamental mahasiswa mengenai logika dan algoritma di Laboratorium.</li> <li>Memberikan dukungan teknis terkait masalah konektivitas jaringan dan konfigurasi software.</li> </ul>
+            </article>
+            
+            <article class="job-item">
+                <h3 class="job-title">ASISTEN LABORATORIUM ANALISIS DESAIN BERORIENTASI OBJEK</h3> <h4 class="company">UNIVERSITAS BUANA PERJUANGAN, KARAWANG</h4> <p class="date">SEP 2023 - JAN 2024</p> <ul>
+                    <li>Membimbing praktikum Analisis Desain Berorientasi Objek, sekaligus memberikan dukungan teknis dan debugging untuk memecahkan masalah mahasiswa.</li> <li>Memberikan dukungan teknis terkait masalah konektivitas jaringan dan konfigurasi software.</li> </ul>
+            </article>
+
+            <article class="job-item">
+                <h3 class="job-title">STAFF IT INTERN</h3> <h4 class="company">UNIVERSITAS BUANA PERJUANGAN, KARAWANG</h4> <p class="date">SEP 2023 - SEP 2024</p> <ul>
+                    <li>Mengembangkan aplikasi berbasis web bernama "Agenda Kegiatan Universitas" untuk mengelola kegiatan pegawai Universitas menggunakan framework Laravel.</li> <li>Membuat Aplikasi berbasis web bernama "Kerja Praktik" untuk mengelola kegiatan magang dan jadwal sidang kerja praktik di Universitas menggunakan framework Laravel.</li> </ul>
+            </article>
+
+            <div class="image-gallery">
+                <img src="path/ke/foto-pengalaman-1.jpg" alt="Foto Pengalaman Kerja 1">
+                <img src="path/ke/foto-pengalaman-2.jpg" alt="Foto Pengalaman Kerja 2">
+                <img src="path/ke/foto-pengalaman-3.jpg" alt="Foto Pengalaman Kerja 3">
+                <img src="path/ke/foto-pengalaman-4.jpg" alt="Foto Pengalaman Kerja 4">
+            </div>
+        </section>
+
+        <section id="sertifikasi">
+            <h2 class="section-title">Sertifikasi & Pelatihan</h2> <div class="certificate-gallery">
+                <div class="certificate-item">
+                    <img src="Picture1.png" alt="Sertifikat BNSP Junior Web Developer">
+                    <p>Junior Web Developer - BNSP KOMDIGI (2023-2026)</p> </div>
+                <div class="certificate-item">
+                    <img src="Screenshot 2025-10-25 185328.png" alt="Sertifikat BNSP Junior Web Developer">
+                    <p>Sertifikat Mahir Bahasa Inggris dari Dasar - ZeanLEAP (2025 - 2026)</p> </div>
+                <div class="certificate-item">
+                    <img src="Picture2.png" alt="Sertifikat Dicoding Generative AI">
+                    <p>Belajar Penggunaan Generative AI - Dicoding (2025-2028)</p> </div>
+                <div class="certificate-item">
+                    <img src="Picture3.png" alt="Sertifikat Dicoding AI Praktis">
+                    <p>AI Praktis untuk Produktivitas - Dicoding (2025-2028)</p> </div>
+            </div>
+        </section>
+
+        <section id="proyek">
+            <h2 class="section-title">Project Portofolio</h2> <div class="project-category">
+                <h3 class="section-subtitle">Website</h3> <article class="project-item">
+                    <div class="project-image">
+                        <img src="Picture6.png" alt="Screenshot Aplikasi Agenda UBP">
+                    </div>
+                    <div class="project-description">
+                        <h4>Aplikasi Agenda UBP Karawang</h4> <p>Mengembangkan aplikasi berbasis web untuk mengelola kegiatan pegawai Universitas menggunakan framework Laravel.</p> </div>
+                </article>
+                <article class="project-item">
+                    <div class="project-image">
+                        <img src="Picture7.png" alt="Screenshot Aplikasi Kerja Praktik">
+                    </div>
+                    <div class="project-description">
+                        <h4>Aplikasi Kerja Praktik</h4> <p>Membuat Aplikasi berbasis web untuk mengelola kegiatan magang dan jadwal sidang kerja praktik di Universitas menggunakan framework Laravel.</p> </div>
+                </article>
+            </div>
+
+            <div class="project-category">
+                <h3 class="section-subtitle">Jurnal & Publikasi</h3> <article class="project-item">
+                    <div class="project-image">
+                        <img src="Picture4.png" alt="Jurnal Analisis Sentimen">
+                    </div>
+                    <div class="project-description">
+                        <h4>Public Sentiment Analysis on Electric Cars Using Machine Learning Algoritms</h4> <p>Diterbitkan di Jurnal Teknik Informatika (JUTIF), Vol. 5, No. 4, Agustus 2024.</p> </div>
+                </article>
+                <article class="project-item">
+                    <div class="project-image">
+                        <img src="Picture5.png" alt="Jurnal Klasifikasi Obesitas">
+                    </div>
+                    <div class="project-description">
+                        <h4>Klasifikasi Tingkat Obesitas Berbasis Machine Learning</h4> <p>Diterbitkan di Jambura Journal of Informatics, Vol. 6, No. 2, Oktober 2024.</p> </div>
+                </article>
+                 <article class="project-item">
+                    <div class="project-image">
+                        <img src="Picture8.png" alt="Jurnal Pengenalan AI Canva">
+                    </div>
+                    <div class="project-description">
+                        <h4>Pengenalan AI Sebagai Media Pembelajaran Inovatif Menggunakan Canva</h4> <p>Publikasi pengabdian masyarakat untuk guru di SDN 1 Cipondoh.</p> </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="kepemimpinan">
+            <h2 class="section-title">Pengalaman Kepemimpinan</h2> <div class="leadership-grid">
+                <div class="leadership-item">
+                    <img src="6540b12d-f8e7-475a-8320-b713061ade54.jpg" alt="Foto BPROTIC">
+                    <h4>CTO divisi Design Engineering</h4> <p>Buana Perjuangan Robotic Club (BPROTIK)</p> </div>
+                <div class="leadership-item">
+                    <img src="IMG_0003 12R,.jpg" alt="Foto MPK SMAN 3 Karawang">
+                    <h4>Komisi Bidang 2 Kedisiplinan</h4> <p>Majelis Perwalikan Kelas (MPK) SMAN 3 Karawang (2019-2020)</p> </div>
+                <div class="leadership-item">
+                    <img src="IMG-20240305-WA0043.jpg" alt="Foto Paskibra SMAN 3 Karawang">
+                    <h4>Ketua Angkatan Paskibra</h4> <p>Pasukan Pengibar Bendera (Paskibra) SMAN 3 Karawang</p> </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="kontak">
+        <h2 class="closing">SEKIAN TERIMA KASIH</h2> <ul class="contact-info">
+            <li>📞 +62 895 0951 8492</li> <li>✉️ riggerdamaiartat@gmail.com</li> <li>📍 Karawang, Jawa Barat</li> </ul>
+        </footer>
+
+</body>
+</html>
