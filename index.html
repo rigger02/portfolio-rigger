@@ -1,583 +1,1359 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio - Rigger Damaiarta Tejayanda</title>
+    <title>Portofolio Profesional - Rigger Damaiarta Tejayanda</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        /* CSS Estetik & Profesional */
-        :root {
-            --font-utama: 'Poppins', sans-serif;
-            --font-judul: 'Caveat', cursive;
-            --warna-teal: #00aabf;
-            --warna-teks: #333333;
-            --warna-latar: #f8f9fa;
-            --warna-putih: #ffffff;
-            --bayangan: 0 10px 30px rgba(0, 0, 0, 0.07);
-        }
-
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-utama);
-            line-height: 1.7;
-            background-color: var(--warna-latar);
-            color: var(--warna-teks);
-            margin: 0;
-            padding: 0;
-        }
-
-        /* --- Navigasi --- */
-        nav.navbar {
-            background: var(--warna-putih);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            padding: 15px 40px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        nav.navbar .logo {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--warna-teks);
-            text-decoration: none;
-        }
-
-        nav.navbar ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav.navbar ul li a {
-            text-decoration: none;
-            color: var(--warna-teks);
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        nav.navbar ul li a:hover {
-            color: var(--warna-teal);
-        }
-
-        /* --- Kontainer Utama --- */
-        main.container {
-            max-width: 1100px;
-            margin: 100px auto 30px auto; /* Margin atas untuk navbar fixed */
-            background-color: var(--warna-putih);
-            border-radius: 12px;
-            box-shadow: var(--bayangan);
-            overflow: hidden;
-        }
-
-        /* --- Bagian Konten (Per Slide) --- */
-        section {
-            padding: 60px 50px;
-            border-bottom: 1px solid #eee;
-        }
-        section:last-of-type {
-            border-bottom: none;
-        }
-
-        /* Judul Estetik (seperti 'Summary' di PDF) */
-        h2.section-title {
-            font-family: var(--font-judul);
-            font-size: 3.5rem;
-            color: var(--warna-teal);
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 40px;
-        }
-        
-        h3.section-subtitle {
-            font-family: var(--font-utama);
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--warna-teks);
-            margin-bottom: 20px;
-            border-bottom: 3px solid var(--warna-teal);
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-
-        /* --- 1. Hero (Slide 1) --- */
-        section#hero {
-            background-color: var(--warna-teks);
-            color: var(--warna-putih);
-            text-align: center;
-            padding: 100px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 400px;
-        }
-
-        section#hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: 1px;
-        }
-
-        section#hero p.subtitle {
-            font-family: var(--font-judul);
-            font-size: 2rem;
-            color: var(--warna-teal);
-            margin: 10px 0 0 0;
-        }
-
-        /* --- 2. Summary (Slide 2) --- */
-        section#summary .content-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-        }
-        section#summary .summary-text {
-            flex: 2;
-        }
-        section#summary .summary-text h4 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--warna-teks);
-            margin-top: 0;
-        }
-        section#summary .summary-text p {
-            font-size: 1rem;
-            color: #555;
-        }
-        section#summary .summary-image {
-            flex: 1;
-            text-align: center;
-        }
-        section#summary .summary-image img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 8px solid var(--warna-putih);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        /* --- 3. Pendidikan (Slide 3) --- */
-        section#pendidikan .edu-list {
-            list-style: none;
-            padding: 0;
-        }
-        section#pendidikan .edu-item {
-            padding-left: 30px;
-            margin-bottom: 20px;
-            position: relative;
-        }
-        section#pendidikan .edu-item::before {
-            content: '🎓';
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 1.2rem;
-        }
-        section#pendidikan .edu-item strong {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--warna-teks);
-        }
-        section#pendidikan .edu-item span {
-            font-size: 1rem;
-            color: #777;
-            display: block;
-        }
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
-        }
-        .image-gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: var(--bayangan);
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        .image-gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        /* --- 4. Pengalaman Kerja (Slide 4-7) --- */
-        .job-item {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px dashed #ddd;
-        }
-        .job-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .job-item h3.job-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--warna-teks);
-            margin: 0;
-        }
-        .job-item h4.company {
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--warna-teal);
-            margin: 5px 0 10px 0;
-            font-style: italic;
-        }
-        .job-item p.date {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #888;
-            margin-bottom: 15px;
-        }
-        .job-item ul {
-            padding-left: 20px;
-            margin: 0;
-        }
-        .job-item li {
-            color: #555;
-            margin-bottom: 8px;
-        }
-
-        /* --- 5. Sertifikasi (Slide 8-9) --- */
-        .certificate-gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-        .certificate-item {
-            text-align: center;
-        }
-        .certificate-item img {
-            width: 100%;
-            border-radius: 8px;
-            border: 1px solid #eee;
-            box-shadow: var(--bayangan);
-            transition: all 0.3s ease;
-        }
-        .certificate-item img:hover {
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-        }
-        .certificate-item p {
-            font-weight: 600;
-            margin-top: 15px;
-            color: var(--warna-teks);
-        }
-
-        /* --- 6. Proyek (Slide 10-12) --- */
-        .project-item {
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-            margin-bottom: 25px;
-        }
-        .project-image {
-            flex: 1;
-        }
-        .project-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: var(--bayangan);
-        }
-        .project-description {
-            flex: 2;
-        }
-        .project-description h4 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin: 0 0 10px 0;
-        }
-        .project-description p {
-            margin: 0;
-            color: #555;
-        }
-
-        /* --- 7. Kepemimpinan (Slide 13) --- */
-        .leadership-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            text-align: center;
-        }
-        .leadership-item img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 5px solid var(--warna-teal);
-            box-shadow: var(--bayangan);
-        }
-        .leadership-item h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin: 10px 0 5px 0;
-        }
-        .leadership-item p {
-            font-size: 0.95rem;
-            color: #777;
-            margin: 0;
-        }
-
-        /* --- 8. Footer/Kontak (Slide 14) --- */
-        footer {
-            background-color: var(--warna-teks);
-            color: var(--warna-putih);
-            text-align: center;
-            padding: 50px 40px;
-        }
-        footer h2.closing {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 0 0 30px 0;
-        }
-        .contact-info {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        .contact-info li {
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: #eee;
-        }
-        
-        /* --- Responsif --- */
-        @media (max-width: 768px) {
-            nav.navbar {
-                flex-direction: column;
-                padding: 15px;
-            }
-            nav.navbar ul {
-                margin-top: 10px;
-                gap: 15px;
-            }
-            main.container {
-                margin: 130px 15px 15px 15px;
-            }
-            section {
-                padding: 40px 25px;
-            }
-            section#summary .content-wrapper,
-            .project-item {
-                flex-direction: column;
-            }
-            .certificate-gallery,
-            .leadership-grid {
-                grid-template-columns: 1fr;
-            }
-            .contact-info {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="#hero" class="logo">Rigger Damaiarta Tejayanda</a>
-        <ul>
-            <li><a href="#summary">Summary</a></li>
-            <li><a href="#pendidikan">Pendidikan</a></li>
-            <li><a href="#pengalaman">Pengalaman</a></li>
-            <li><a href="#proyek">Proyek</a></li>
-            <li><a href="#kontak">Kontak</a></li>
-        </ul>
+    <nav id="mainNav">
+        <a href="#hero" class="logo">Rigger Damaiarta Tejayanda<span class="cite"></span></a>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="nav-right">
+            <ul>
+                <li><a href="#tentang">Profil</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
+                <li><a href="#sertifikasi">Sertifikasi</a></li>
+                <li><a href="#pengalaman">Pengalaman Kerja</a></li>
+                <li><a href="#proyek">Proyek</a></li>
+                <li><a href="#kepemimpinan">Kepemimpinan</a></li>
+            </ul>
+            <button type="button" id="openThemeModal" class="nav-settings-btn" aria-label="Pengaturan tema"><i class="fa-solid fa-gear"></i></button>
+        </div>
+        <aside class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+            <div class="mobile-sidebar-header">
+                <span class="mobile-logo">Menu</span>
+                <button type="button" class="close-sidebar" id="closeSidebar" aria-label="Tutup menu navigasi">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="#tentang">Profil</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
+                <li><a href="#sertifikasi">Sertifikasi</a></li>
+                <li><a href="#pengalaman">Pengalaman Kerja</a></li>
+                <li><a href="#proyek">Proyek</a></li>
+                <li><a href="#kepemimpinan">Kepemimpinan</a></li>
+            </ul>
+            <button type="button" id="openThemeModalMobile" class="nav-settings-btn mobile-theme-btn" aria-label="Pengaturan tema">
+                <i class="fa-solid fa-gear"></i> Tema
+            </button>
+        </aside>
     </nav>
 
-    <main class="container">
+    <div class="modal-overlay" id="themeModal">
+        <div class="modal-content">
+            <button type="button" class="close-modal" id="closeThemeModal">&times;</button>
+            <h3>Ganti Tema</h3>
+            <p>Pilih tampilan yang nyaman untuk Anda:</p>
+            <div class="theme-options">
+                <button type="button" class="theme-option active" data-theme="dark" id="themeDark">
+                    <i class="fa-solid fa-moon"></i>
+                    <span>Tema Gelap</span>
+                </button>
+                <button type="button" class="theme-option" data-theme="light" id="themeLight">
+                    <i class="fa-solid fa-sun"></i>
+                    <span>Tema Terang</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
-        <!-- <section id="hero">
-            <h1>RIGGER DAMAIARTA TEJAYANDA</h1> <p class="subtitle"></p> </section> -->
+    <div class="modal-overlay" id="connectModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h3>Let's Connect!</h3>
+            <p>Pilih platform untuk menghubungi saya:</p>
+            <div class="modal-links">
+                <a href="https://wa.me/6289509518492" target="_blank" class="contact-card wa">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp<span class="cite"></span>
+                </a>
+                <a href="https://linkedin.com/in/rigger-dt/" target="_blank" class="contact-card li">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn<span class="cite"></span>
+                </a>
+                <a href="mailto:rigger.damaiartat@gmail.com" class="contact-card em">
+                    <i class="fa-solid fa-envelope"></i> Email<span class="cite"></span>
+                </a>
+                <a href="tel:+6289509518492" class="contact-card">
+                    <i class="fa-solid fa-phone"></i> Telepon<span class="cite"></span>
+                </a>
+            </div>
+        </div>
+    </div>
 
-        <section id="summary">
-            <h2 class="section-title">Summary</h2> <div class="content-wrapper">
-                <div class="summary-text">
-                    <h4>SAYA RIGGER DAMAIARTA TEJAYANDA</h4> 
-                    <p>Lulusan Teknik Informatika dengan IPK 3.80 yang memiliki antusiasme tinggi untuk mempelajari hal baru dan fokus sebagai pemecah masalah yang sistematis.</p> 
-                    <p>Terbiasa menganalisis dan memberikan solusi teknis di lingkungan serba cepat, serta mampu bekerja dengan target dan tenggat waktu ketat untuk memastikan kelancaran operasional.</p> 
-                    <p>Memiliki pengalaman dalam mengoordinasi tim, merancang materi pelatihan, mengelola platform digital, dan menyusun dokumentasi teknis secara teliti, siap berkontribusi aktif dalam lingkungan kerja yang dinamis.</p> 
-                    <p>Memiliki minat karir yang kuat di bidang Staf Administrasi dan Analisis Data, didukung dengan kemampuan teknis pengolahan data menggunakan Python (Google Colab, Jupyter Notebook), visualisasi dengan Power BI, serta penyusunan laporan administrasi yang rapi menggunakan Microsoft Office (Excel, Word, PowerPoint). </p> </div>
-                <div class="summary-image">
-                    <img src="WhatsApp Image 2025-05-27 at 11.29.39_f0b1bc06 - Copy.jpg" alt="Foto Rigger Damaiarta Tejayanda">
+    <div class="modal-overlay" id="projectImageModal" aria-hidden="true">
+        <div class="modal-content modal-image-content" role="dialog" aria-modal="true" aria-label="Detail gambar proyek">
+            <button type="button" class="close-modal" id="closeProjectImageModal" aria-label="Tutup modal">&times;</button>
+
+            <div class="project-image-carousel-wrap">
+                <div class="carousel-container project-image-carousel" data-skip-init="true">
+                    <div class="carousel-track" id="projectImageModalTrack"></div>
+                    <button class="carousel-btn prev" type="button" id="projectImageModalPrev" aria-label="Gambar sebelumnya">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" type="button" id="projectImageModalNext" aria-label="Gambar berikutnya">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <div class="carousel-indicators" id="projectImageModalIndicators"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="hero">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-layout">
+                <div class="hero-content reveal">
+                    <p class="greeting">Hello, I'm</p>
+                    <h1><span>Rigger Damaiarta Tejayanda</span><span class="cite"></span></h1>
+                    <p>
+                        Lulusan Teknik Informatika dengan IPK 3.80 yang memiliki antusiasme tinggi untuk mempelajari hal baru dan fokus sebagai pemecah masalah yang sistematis.<span class="cite"></span>
+                    </p>
+                    <button class="btn-connect" id="openModalBtn">
+                        Book a call <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="hero-image-wrapper reveal">
+                    <div class="hero-carousel carousel-container" data-autoplay="true" data-interval="4000">
+                        <div class="carousel-track">
+                            <div class="carousel-slide"><img src="img/Rigger-1.jpg" alt="Profil 1"></div>
+                            <div class="carousel-slide"><img src="img/Rigger-2.jpg" alt="Profil 2"></div>
+                            <div class="carousel-slide"><img src="img/Rigger-3.jpg" alt="Profil 3"></div>
+                            <div class="carousel-slide"><img src="img/Rigger-4.jpg" alt="Profil 4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="bg-sec">
+            <div class="container">
+                <h2 class="section-title reveal">Profil & Keahlian<span class="cite"></span></h2>
+                <div class="about-wrapper">
+                    <div class="about-content reveal">
+                        <p>
+                            Terbiasa menganalisis dan memberikan solusi teknis demi menjaga kelancaran operasional.<span class="cite"></span> Memiliki pengalaman dalam mengoordinasi tim, merancang materi pelatihan, dan menyusun dokumentasi teknis.<span class="cite"></span> Kini berfokus mengembangkan karir di bidang Data Science, Data Analyst, dan Staff Reporting, didukung pada kemampuan pengolahan data melalui Python (Google Colab, Jupyter Notebook), serta penguasaan Microsoft Office (Excel, Word, PowerPoint) untuk penyusunan laporan analitis yang komprehensif.<span class="cite"></span>
+                        </p>
+                    </div>
+
+                    <div class="skills-grid">
+                        <div class="skill-box reveal">
+                            <h4><i class="fa-solid fa-code-branch" style="color:var(--aksen); margin-right:8px;"></i>Hard Skills</h4>
+                            <div class="skill-tags">
+                                <span>Analisis Data</span>
+                                <span>Python basic</span>
+                                <span>Data Science</span>
+                                <span>Machine Learning</span>
+                                <span>Data Visualization</span>
+                                <span>Microsoft Excel</span>
+                                <span>Microsoft Word</span>
+                                <span>Microsoft PowerPoint</span>
+                                <span>Microsoft One Note</span>
+                                <span>Microsoft Project</span>
+                                <span>Artificial Intelligence</span>
+                                <span>IT Support</span>
+                                <span>System Design</span>
+                                <span>SQL Querying</span>
+                                <span>Technical Documentation</span>
+                                <span>Reporting</span>
+                                <span class="cite"></span>
+                            </div>
+                        </div>
+                        <div class="skill-box reveal">
+                            <h4><i class="fa-solid fa-screwdriver-wrench" style="color:var(--aksen); margin-right:8px;"></i>Tools & Framework</h4>
+                            <div class="skill-tags">
+                                <span>Python</span>
+                                <span>Google Colab</span>
+                                <span>Jupyter Notebook</span>
+                                <span>Github</span>
+                                <span>Visual Studio Code</span>
+                                <span>Cursor</span>
+                                <span>XAMPP</span>
+                                <span>Microsoft Office</span>
+                                <span>Trello</span>
+                                <span>Figma</span>
+                                <span>UML</span>
+                                <span>PHP</span>
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>Google Looker Studio</span>
+                                <span>SQL Server Management Studio</span>
+                                <span class="cite"></span>
+                            </div>
+                        </div>
+                        <div class="skill-box reveal">
+                            <h4><i class="fa-solid fa-users" style="color:var(--aksen); margin-right:8px;"></i>Soft Skills</h4>
+                            <div class="skill-tags">
+                                <span>Kerja Sama Tim</span>
+                                <span>Adaptif</span>
+                                <span>Proaktif</span>
+                                <span>Berinisiatif Tinggi</span>
+                                <span>Manajemen Waktu</span>
+                                <span>Kreativitas</span>
+                                <span>Pendengar yang Baik</span>
+                                <span>Kepemimpinan</span>
+                                <span>Pemecahan Masalah</span>
+                                <span class="cite"></span>
+                            </div>
+                        </div>
+                        <div class="skill-box reveal">
+                            <h4><i class="fa-solid fa-language" style="color:var(--aksen); margin-right:8px;"></i>Bahasa</h4>
+                            <div class="skill-tags">
+                                <span>Indonesia (Native)</span>
+                                <span>Inggris (Professional)</span>
+                                <span class="cite"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="pendidikan">
-            <h2 class="section-title">Pendidikan</h2> <ul class="edu-list">
-                <li class="edu-item">
-                    <strong>Universitas Buana Perjuangan Karawang</strong> <span>2021-2025</span> <span>Teknik Informatika - IPK 3.80</span> </li>
-                <li class="edu-item">
-                    <strong>SMA Negeri 3 Karawang</strong> <span>2018-2021</span> <span>MIPA</span> </li>
-            </ul>
-            <div class="image-gallery">
-                <img src="WhatsApp Image 2025-07-30 at 00.45.44_ebf912bd.jpg" alt="Foto Wisuda">
-                <img src="WhatsApp Image 2025-10-25 at 18.46.47_9c3cf36e.jpg" alt="Foto Topi Toga">
-                <img src="WhatsApp Image 2025-10-25 at 18.46.47_d7099459.jpg" alt="Foto Kampus">
+            <div class="container">
+                <h2 class="section-title reveal">Pendidikan<span class="cite"></span></h2>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-header-block">
+                            <img src="img/ubp.png" class="timeline-logo" alt="Logo UBP">
+                            <div class="timeline-title-wrap">
+                                <h3>Universitas Buana Perjuangan, Karawang<span class="cite"></span></h3>
+                                <p class="timeline-subtitle">S1 Teknik Informatika, Fakultas Ilmu Komputer<span class="cite"></span></p>
+                                <span class="timeline-date">Sep 2021 - Jun 2025 | IPK 3.80 of 4.00 (Predikat: Cumlaude)<span class="cite"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-header-block">
+                            <img src="img/dicoding.jpg" class="timeline-logo" alt="Logo Dicoding">
+                            <div class="timeline-title-wrap">
+                                <h3>Dicoding Indonesia<span class="cite"></span></h3>
+                                <p class="timeline-subtitle">Coding Camp powered by DBS Foundation - Data Scientist<span class="cite"></span></p>
+                                <span class="timeline-date">Feb 2026 - Sekarang<span class="cite"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sertifikasi" class="bg-sec">
+            <div class="container">
+                <h2 class="section-title reveal">Sertifikasi Profesional<span class="cite"></span></h2>
+                <div class="category-grid">
+                    <div class="category-col reveal">
+                        <h3 class="category-title"><i class="fa-solid fa-chart-pie"></i> Data Science & Analytics</h3>
+                        <ul class="cert-list-interactive">
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Belajar Penerapan Data Science<span class="cite"></span></span>
+                                    <span class="cert-date">Mar 2026 | Dicoding Indonesia<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/penerapands.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Belajar Matematika untuk Data Science<span class="cite"></span></span>
+                                    <span class="cert-date">Feb 2026 | Dicoding Indonesia<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/mtkds.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Belajar Fundamental Analisis Data<span class="cite"></span></span>
+                                    <span class="cert-date">Feb 2026 | Dicoding Indonesia<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/analisisds.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Belajar Dasar Data Science<span class="cite"></span></span>
+                                    <span class="cert-date">Jan 2026 | Dicoding Indonesia<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/dasards.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="category-col reveal">
+                        <h3 class="category-title"><i class="fa-solid fa-robot"></i> Machine Learning & AI</h3>
+                        <ul class="cert-list-interactive">
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Belajar Machine Learning untuk Pemula<span class="cite"></span></span>
+                                    <span class="cert-date">Jan 2026 | Dicoding Indonesia<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/mlds.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Belajar Penggunaan Generative AI<span class="cite"></span></span>
+                                    <span class="cert-date">Jul 2025 | Dicoding Indonesia<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/gen-ai.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">AI Praktis untuk Produktivitas<span class="cite"></span></span>
+                                    <span class="cert-date">Jul 2025 | Dicoding Indonesia<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/ai-prak.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="category-col reveal">
+                        <h3 class="category-title"><i class="fa-solid fa-database"></i> Programming & SQL</h3>
+                        <ul class="cert-list-interactive">
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Memulai Pemrograman dengan Python<span class="cite"></span></span>
+                                    <span class="cert-date">Jan 2026 | Dicoding Indonesia<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/pyds.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Belajar Dasar Structured Query Language (SQL)<span class="cite"></span></span>
+                                    <span class="cert-date">Jan 2026 | Dicoding Indonesia<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/sqlds.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="category-col reveal">
+                        <h3 class="category-title"><i class="fa-solid fa-laptop-code"></i> Web Developer</h3>
+                        <ul class="cert-list-interactive">
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Junior Web Developer<span class="cite"></span></span>
+                                    <span class="cert-date">Jun 2023 | BPPTIK KOMINFO<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/jwd.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="category-col reveal">
+                        <h3 class="category-title"><i class="fa-solid fa-wallet"></i> Lainnya</h3>
+                        <ul class="cert-list-interactive">
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Introduction to Financial Literacy<span class="cite"></span></span>
+                                    <span class="cert-date">Des 2025 | Dicoding Indonesia<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/financial.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                            <li class="cert-item-row">
+                                <div class="cert-info">
+                                    <span class="cert-name">Sertifikat Mahir Bahasa Inggris dari Dasar<span class="cite"></span></span>
+                                    <span class="cert-date">Jul 2025 | Zeanlap<span class="cite"></span></span>
+                                </div>
+                                <a href="sertifikat/inggriszeanlap.pdf" target="_blank" class="cert-link" title="Lihat Sertifikat"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="pengalaman">
-            <h2 class="section-title">Pengalaman Kerja</h2> <article class="job-item">
-                <h3 class="job-title">IT OPERATIONS (CONTRACTOR VIA KANO TEKNOLOGI)</h3> <h4 class="company">PT HM SAMPOERNA TBK, KARAWANG</h4> <p class="date">AUG 2025 - PRESENT</p> <ul>
-                    <li>Bertanggung jawab sebagai L2 Support untuk aplikasi manufaktur kritis (iMEL), melakukan troubleshooting (aplikasi, database, sistem) dan mendukung proyek IT Resiliency (Backup, Restore, DR).</li> 
-                    <li>Berkolaborasi aktif dalam bahasa Inggris dengan tim multinasional untuk menyelesaikan case dan proyek teknis.</li> </ul>
-            </article>
+            <div class="container">
+                <h2 class="section-title reveal">Pengalaman Kerja<span class="cite"></span></h2>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-header-block">
+                            <div class="timeline-logos">
+                                <img src="img/sampoerna.png" class="timeline-logo" alt="Logo PT HM Sampoerna Tbk (client)">
+                                <img src="img/kano.jpeg" class="timeline-logo" alt="Logo PT Kano Teknologi (outsourcing)">
+                            </div>
+                            <div class="timeline-title-wrap">
+                                <h3>IT Support <span class="job-type">Fulltime</span><span class="cite"></span></h3>
+                                <p class="timeline-subtitle">PT HM Sampoerna Tbk (Outsourcing PT Kano Teknologi), Karawang<span class="cite"></span></p>
+                                <span class="timeline-date">Aug 2025 - Feb 2026<span class="cite"></span></span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Menggunakan SQL Query di SSMS untuk memeriksa lebih dari 5 anomali data produksi per minggu, guna memastikan keakuratan data pada sistem manufaktur.<span class="cite"></span></li>
+                            <li>Menjalankan audit Health Check rutin pada lapisan Database guna mendeteksi dini isu performa dan kapasitas yang berisiko menghambat operasional.<span class="cite"></span></li>
+                            <li>Mengawal stabilitas sistem sebagai L1 Support untuk iMEL, aplikasi manufaktur kritis yang mengelola seluruh alur produksi dari bahan baku hingga produk jadi.<span class="cite"></span></li>
+                            <li>Secara proaktif menyusun dokumentasi teknis mendalam terkait penanganan insiden yang dapat diakses oleh tim lokal maupun global untuk mempercepat penyelesaian masalah serupa.<span class="cite"></span></li>
+                        </ul>
+                    </div>
 
-            <article class="job-item">
-                <h3 class="job-title">CUSTOMER SERVICE INTERN</h3> <h4 class="company">UNIVERSITAS BUANA PERJUANGAN, KARAWANG</h4> <p class="date">SEP 2024 - JUN 2025</p> <ul>
-                    <li>Mengelola platform e-learning (Buana Online Course), memberikan support teknis kepada pengguna dan memastikan kelancaran operasional.</li> 
-                    <li>Merekapitulasi dan menganalisis data e-learning (pengguna & kursus) menggunakan Excel & Google Sheets untuk mendukung peningkatan layanan.</li> </ul>
-            </article>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-header-block">
+                            <img src="img/ubp.png" class="timeline-logo" alt="Logo UBP">
+                            <div class="timeline-title-wrap">
+                                <h3>Customer Service<span class="job-type">Internship</span><span class="cite"></span></h3>
+                                <p class="timeline-subtitle">Universitas Buana Perjuangan, Karawang<span class="cite"></span></p>
+                                <span class="timeline-date">Sep 2024 - Jun 2025<span class="cite"></span></span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Melayani dan menyelesaikan lebih dari 10 keluhan teknis mahasiswa setiap hari dengan waktu respons yang cepat untuk meminimalisir gangguan belajar.<span class="cite"></span></li>
+                            <li>Menyusun laporan rekapitulasi data aktivitas perkuliahan dari sistem ke Microsoft Excel sebagai bahan evaluasi kinerja akademik dosen dalam satu semester.<span class="cite"></span></li>
+                        </ul>
+                    </div>
 
-            <article class="job-item">
-                <h3 class="job-title">IT SUPPORT</h3> <h4 class="company">KOMISI PEMILIHAN UMUM DAERAH, KARAWANG</h4> <p class="date">MAY - JUN 2024</p> <ul>
-                    <li>Memastikan kelancaran operasional seluruh infrastruktur teknis untuk tes berbasis komputer (CAT).</li> 
-                    <li>Memberikan dukungan teknis dan melakukan troubleshooting pada lebih dari 40 unit PC selama tes berlangsung.</li> </ul>
-            </article>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-header-block">
+                            <img src="img/ubp.png" class="timeline-logo" alt="Logo UBP">
+                            <div class="timeline-title-wrap">
+                                <h3>Asisten Dosen Analisis Desain Berorientasi Objek <span class="job-type">Part time</span><span class="cite"></span></h3>
+                                <p class="timeline-subtitle">Universitas Buana Perjuangan, Karawang<span class="cite"></span></p>
+                                <span class="timeline-date">Sep 2024 - Jan 2025<span class="cite"></span></span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Membimbing mahasiswa dalam menyusun laporan teknis yang standar, mencakup perancangan alur bisnis dan struktur database menggunakan diagram visual UML dan ERD.<span class="cite"></span></li>
+                            <li>Berkolaborasi dengan dosen dalam merancang studi kasus yang relevan untuk menguji kemampuan analisis mahasiswa dalam memecahkan masalah sistem yang kompleks.<span class="cite"></span></li>
+                            <li>Memimpin sesi perkuliahan (teori dan praktikum) secara mandiri untuk memastikan kelancaran proses belajar mengajar saat dosen berhalangan.<span class="cite"></span></li>
+                        </ul>
+                    </div>
 
-            <article class="job-item">
-                <h3 class="job-title">ASISTEN DOSEN ANALISIS DESAIN BERORIENTASI OBJEK</h3> <h4 class="company">UNIVERSITAS BUANA PERJUANGAN, KARAWANG</h4> <p class="date">SEP 2024 - JAN 2025</p> <ul>
-                    <li>Membimbing mahasiswa dalam praktikum dan memimpin sesi perkuliahan secara mandiri saat dosen berhalangan.</li> 
-                    <li>Mendukung dosen dalam penyiapan materi ajar serta memberikan support teknis (jaringan & software) kepada mahasiswa.</li> </ul>
-            </article>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-header-block">
+                            <img src="img/kpu.png" class="timeline-logo" alt="Logo KPU">
+                            <div class="timeline-title-wrap">
+                                <h3>IT Support <span class="job-type">Part time</span><span class="cite"></span></h3>
+                                <p class="timeline-subtitle">Komisi Pemilihan Umum Daerah, Karawang<span class="cite"></span></p>
+                                <span class="timeline-date">May - Jun 2024<span class="cite"></span></span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Memastikan kelancaran operasional seluruh infrastruktur teknis untuk tes berbasis komputer (CAT).<span class="cite"></span></li>
+                            <li>Memberikan dukungan teknis dan melakukan troubleshooting pada lebih dari 40 unit PC selama tes berlangsung.<span class="cite"></span></li>
+                        </ul>
+                    </div>
 
-            <article class="job-item">
-                <h3 class="job-title">ASISTEN LABORATORIUM PEMROGRAMAN DASAR</h3> <h4 class="company">UNIVERSITAS BUANA PERJUANGAN, KARAWANG</h4> <p class="date">FEB - JUN 2024</p> <ul>
-                    <li>Membimbing praktikum Pemrograman Dasar (Python), berfokus membangun pemahaman fundamental mahasiswa mengenai logika dan algoritma di Laboratorium.</li> 
-                    <li>Memberikan dukungan teknis terkait masalah konektivitas jaringan dan konfigurasi software.</li> </ul>
-            </article>
-            
-            <article class="job-item">
-                <h3 class="job-title">ASISTEN LABORATORIUM ANALISIS DESAIN BERORIENTASI OBJEK</h3> <h4 class="company">UNIVERSITAS BUANA PERJUANGAN, KARAWANG</h4> <p class="date">SEP 2023 - JAN 2024</p> <ul>
-                    <li>Membimbing praktikum Analisis Desain Berorientasi Objek, sekaligus memberikan dukungan teknis dan debugging untuk memecahkan masalah mahasiswa.</li> 
-                    <li>Memberikan dukungan teknis terkait masalah konektivitas jaringan dan konfigurasi software.</li> </ul>
-            </article>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-header-block">
+                            <img src="img/ubp.png" class="timeline-logo" alt="Logo UBP">
+                            <div class="timeline-title-wrap">
+                                <h3>Asisten Laboratorium Pemrograman Dasar <span class="job-type">Part time</span><span class="cite"></span></h3>
+                                <p class="timeline-subtitle">Universitas Buana Perjuangan, Karawang<span class="cite"></span></p>
+                                <span class="timeline-date">Feb - Jun 2024<span class="cite"></span></span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Membimbing praktikum fundamental bahasa pemrograman Python, dengan penekanan khusus pada pemahaman Struktur Data dan logika algoritma sebagai fondasi awal pengenalan Data Science.<span class="cite"></span></li>
+                            <li>Memeriksa code untuk membantu mahasiswa mengidentifikasi kesalahan sintaks dan logika program.<span class="cite"></span></li>
+                            <li>Memastikan kesiapan infrastruktur laboratorium dengan memberikan dukungan teknis terkait masalah konektivitas jaringan dan konfigurasi software.<span class="cite"></span></li>
+                        </ul>
+                    </div>
 
-            <article class="job-item">
-                <h3 class="job-title">STAFF IT INTERN</h3> <h4 class="company">UNIVERSITAS BUANA PERJUANGAN, KARAWANG</h4> <p class="date">SEP 2023 - SEP 2024</p> <ul>
-                    <li>Mengembangkan aplikasi berbasis web bernama "Agenda Kegiatan Universitas" untuk mengelola kegiatan pegawai Universitas menggunakan framework Laravel.</li> 
-                    <li>Membuat Aplikasi berbasis web bernama "Kerja Praktik" untuk mengelola kegiatan magang dan jadwal sidang kerja praktik di Universitas menggunakan framework Laravel.</li> </ul>
-            </article>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-header-block">
+                            <img src="img/ubp.png" class="timeline-logo" alt="Logo UBP">
+                            <div class="timeline-title-wrap">
+                                <h3>Asisten Lab Analisis Desain Berorientasi Objek <span class="job-type">Part time</span><span class="cite"></span></h3>
+                                <p class="timeline-subtitle">Universitas Buana Perjuangan, Karawang<span class="cite"></span></p>
+                                <span class="timeline-date">Sep 2023 - Jan 2024<span class="cite"></span></span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Membimbing mahasiswa selama berjalannya praktikum Analisis Desain Berorientasi Objek di Laboratorium.<span class="cite"></span></li>
+                            <li>Menerapkan kemampuan analisis dan debugging untuk memecahkan masalah mahasiswa.<span class="cite"></span></li>
+                            <li>Memastikan kesiapan infrastruktur laboratorium dengan memberikan dukungan teknis terkait masalah konektivitas jaringan dan konfigurasi software.<span class="cite"></span></li>
+                        </ul>
+                    </div>
 
-            <!-- <div class="image-gallery">
-                <img src="path/ke/foto-pengalaman-1.jpg" alt="Foto Pengalaman Kerja 1">
-                <img src="path/ke/foto-pengalaman-2.jpg" alt="Foto Pengalaman Kerja 2">
-                <img src="path/ke/foto-pengalaman-3.jpg" alt="Foto Pengalaman Kerja 3">
-                <img src="path/ke/foto-pengalaman-4.jpg" alt="Foto Pengalaman Kerja 4">
-            </div> -->
-        </section>
-
-        <section id="sertifikasi">
-            <h2 class="section-title">Sertifikasi & Pelatihan</h2> <div class="certificate-gallery">
-                <div class="certificate-item">
-                    <img src="Picture1.png" alt="Sertifikat BNSP Junior Web Developer">
-                    <p>Junior Web Developer - BNSP KOMDIGI (2023-2026)</p> </div>
-                <div class="certificate-item">
-                    <img src="Screenshot 2025-10-25 185328.png" alt="Sertifikat BNSP Junior Web Developer">
-                    <p>Sertifikat Mahir Bahasa Inggris dari Dasar - ZeanLEAP (2025 - 2026)</p> </div>
-                <div class="certificate-item">
-                    <img src="Picture2.png" alt="Sertifikat Dicoding Generative AI">
-                    <p>Belajar Penggunaan Generative AI - Dicoding (2025-2028)</p> </div>
-                <div class="certificate-item">
-                    <img src="Picture3.png" alt="Sertifikat Dicoding AI Praktis">
-                    <p>AI Praktis untuk Produktivitas - Dicoding (2025-2028)</p> </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-header-block">
+                            <img src="img/ubp.png" class="timeline-logo" alt="Logo UBP">
+                            <div class="timeline-title-wrap">
+                                <h3>Staff IT<span class="job-type">Internship</span><span class="cite"></span></h3>
+                                <p class="timeline-subtitle">Universitas Buana Perjuangan, Karawang<span class="cite"></span></p>
+                                <span class="timeline-date">Sep 2023 - Sep 2024<span class="cite"></span></span>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>Mengembangkan, monitoring, dan melakukan maintenance pada aplikasi yang digunakan di Universitas seperti Agenda Kegiatan Universitas, Kerja Praktik, PKKMB dan lain lain untuk kelancaran operasional.<span class="cite"></span></li>
+                            <li>Meningkatkan efektivitas dan produktivitas performa layanan operasional aplikasi sebesar 70%.<span class="cite"></span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="proyek">
-            <h2 class="section-title">Project Portofolio</h2> <div class="project-category">
-                <h3 class="section-subtitle">Website</h3> <article class="project-item">
-                    <div class="project-image">
-                        <img src="Picture6.png" alt="Screenshot Aplikasi Agenda UBP">
+        <section id="proyek" class="bg-sec">
+            <div class="container">
+                <h2 class="section-title reveal">Pengalaman Proyek<span class="cite"></span></h2>
+                <div class="project-year-filter">
+                    <button type="button" class="year-filter-btn active" data-year="all">Semua</button>
+                    <!-- <button type="button" class="year-filter-btn" data-year="2027">2027</button> -->
+                    <button type="button" class="year-filter-btn" data-year="2026">2026</button>
+                    <button type="button" class="year-filter-btn" data-year="2025">2025</button>
+                    <button type="button" class="year-filter-btn" data-year="2024">2024</button>
+                    <button type="button" class="year-filter-btn" data-year="2023">2023</button>
+                    <button type="button" class="year-filter-btn" data-year="2022">2022</button>
+                </div>
+                <div class="project-list">
+                    <div class="project-card reveal" data-year="2026">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/dropout1.png" alt="do 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/dropout3.png" alt="do 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/dropout4.png" alt="do 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/dropout5.png" alt="do 4"></div>
+                                    <div class="carousel-slide"><img src="proyek/dropout7.png" alt="do 5"></div>
+                                    <div class="carousel-slide"><img src="proyek/dropout9.png" alt="do 6"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Analisis Prediksi Keputusan Mahasiswa Dropout<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-flask" style="margin-right:5px;"></i> Data Scientist | 2026<span class="cite"></span></span>
+                            <ul>
+                                <li>Menganalisis 4.424 data historis mahasiswa untuk mengidentifikasi akar masalah keputusan dropout, dan menemukan korelasi kuat pada tunggakan finansial, status berhutang, serta kerentanan demografi.<span class="cite"></span></li>
+                                <li>Membangun model Random Forest dengan optimasi SMOTE, dan men-deploy sistem peringatan dini berbasis Streamlit untuk memprediksi dropout secara individu maupun massal.<span class="cite"></span></li>
+                                <li>Menyediakan Business Dashboard dengan Google Looker Studio untuk monitoring bagi dosen wali agar dapat melakukan intervensi proaktif sedini mungkin, seperti program konseling atau relaksasi cicilan SPP.<span class="cite"></span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project-description">
-                        <h4>Aplikasi Agenda UBP Karawang</h4> <p>Mengembangkan aplikasi berbasis web untuk mengelola kegiatan pegawai Universitas menggunakan framework Laravel.</p> </div>
-                </article>
-                <article class="project-item">
-                    <div class="project-image">
-                        <img src="Picture7.png" alt="Screenshot Aplikasi Kerja Praktik">
-                    </div>
-                    <div class="project-description">
-                        <h4>Aplikasi Kerja Praktik</h4> <p>Membuat Aplikasi berbasis web untuk mengelola kegiatan magang dan jadwal sidang kerja praktik di Universitas menggunakan framework Laravel.</p> </div>
-                </article>
-            </div>
 
-            <div class="project-category">
-                <h3 class="section-subtitle">Jurnal & Publikasi</h3> <article class="project-item">
-                    <div class="project-image">
-                        <img src="Picture4.png" alt="Jurnal Analisis Sentimen">
+                    <div class="project-card reveal" data-year="2026">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/resign1.png" alt="resign 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/resign2.png" alt="resign 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/resign6.png" alt="resign 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/resign4.png" alt="resign 4"></div>
+                                    <div class="carousel-slide"><img src="proyek/resign3.png" alt="resign 5"></div>
+                                    <div class="carousel-slide"><img src="proyek/resign5.png" alt="resign 6"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Analisis Prediksi Keputusan Resign Karyawan<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-flask" style="margin-right:5px;"></i> Data Scientist | 2026<span class="cite"></span></span>
+                            <ul>
+                                <li>Mengidentifikasi pola utama pemicu resign karyawan, seperti kompensasi bulanan dan usia dan menerapkan teknik SMOTE untuk menangani ketidakseimbangan data.<span class="cite"></span></li>
+                                <li>Membangun model Klasifikasi Random Forest dengan akurasi 85% lalu mendeploy Business Dashboard interaktif serta membuat sistem peringatan dini untuk memantau probabilitas resign secara real-time.<span class="cite"></span></li>
+                                <li>Membuat langkah Rekomendasi berbasis data untuk tim HR guna menekan attrition rate, berfokus pada peninjauan ulang kompensasi, manajemen batas lembur, serta pembuatan program retensi talenta muda.<span class="cite"></span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project-description">
-                        <h4>Public Sentiment Analysis on Electric Cars Using Machine Learning Algoritms</h4> 
-                        <p>Diterbitkan di Jurnal Teknik Informatika (JUTIF), Vol. 5, No. 4, Agustus 2024.</p> </div>
-                </article>
-                <article class="project-item">
-                    <div class="project-image">
-                        <img src="Picture5.png" alt="Jurnal Klasifikasi Obesitas">
+
+                    <div class="project-card reveal" data-year="2026">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/ecom1.png" alt="e-commerce 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/ecom2.png" alt="e-commerce 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/ecom3.png" alt="e-commerce 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/ecom4.png" alt="e-commerce 4"></div>
+                                    <div class="carousel-slide"><img src="proyek/ecom5.png" alt="e-commerce 5"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Analisis Performa Penjualan & Perilaku Pelanggan E-Commerce<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-chart-pie" style="margin-right:5px;"></i> Data Scientist | 2026<span class="cite"></span></span>
+                            <ul>
+                                <li>Menganalisis dataset transaksi e-commerce berskala besar (96.000+ data) menggunakan Python untuk mengevaluasi kesehatan bisnis dan pola pertumbuhan perusahaan.<span class="cite"></span></li>
+                                <li>Menemukan pola musiman pada pendapatan perusahaan, termasuk lonjakan signifikan pada periode Black Friday, sebagai referensi strategis perencanaan kampanye pemasaran mendatang.<span class="cite"></span></li>
+                                <li>Memetakan distribusi pelanggan secara geografis dan merekomendasikan fokus efisiensi logistik pada wilayah dengan kepadatan transaksi tertinggi untuk dampak bisnis maksimal.<span class="cite"></span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project-description">
-                        <h4>Klasifikasi Tingkat Obesitas Berbasis Machine Learning</h4> 
-                        <p>Diterbitkan di Jambura Journal of Informatics, Vol. 6, No. 2, Oktober 2024.</p> </div>
-                </article>
-                 <article class="project-item">
-                    <div class="project-image">
-                        <img src="Picture8.png" alt="Jurnal Pengenalan AI Canva">
+
+                    <div class="project-card reveal" data-year="2025">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/vini1.jpg" alt="Web 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/vini2.jpg" alt="Web 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/vini4.jpg" alt="Web 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/vini3.jpg" alt="web 4"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Analisis Sentimen Publik terhadap Penghargaan Ballon d'Or 2024<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-flask" style="margin-right:5px;"></i> Machine Learning | 2025<span class="cite"></span></span>
+                            <ul>
+                                <li>Melakukan pemrosesan data tekstual dari komentar Instagram untuk menganalisis sentimen opini publik terkait kontroversi penghargaan Ballon d'Or 2024.<span class="cite"></span></li>
+                                <li>Menguji 4 model Machine Learning (SVM, Decision Tree, Logistic Regression, Random Forest) untuk memprediksi opini publik secara presisi sebagai insight evaluasi kepuasan dan transparansi penghargaan.<span class="cite"></span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project-description">
-                        <h4>Pengenalan AI Sebagai Media Pembelajaran Inovatif Menggunakan Canva Kepada Guru SDN 1 Cipondoh</h4> 
-                        <p>Diterbitkan di ABDIMA JURNAL PENGABDIAN MAHASISWA, Vol 4, No. 1, Februari 2025 </p> </div>
-                </article>
+
+                    <div class="project-card reveal" data-year="2025">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/kp2.png" alt="Web 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/kp1.png" alt="Web 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/kp3.png" alt="Schema"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Sistem Manajemen Kerja Praktik UBP Karawang<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-laptop-code" style="margin-right:5px;"></i> Fullstack Developer | 2025<span class="cite"></span></span>
+                            <ul>
+                                <li>Mengembangkan sistem informasi berbasis web menggunakan framework Laravel untuk mendigitalisasi administrasi Kerja Praktik, mulai dari pendaftaran hingga penjadwalan sidang secara otomatis.<span class="cite"></span></li>
+                                <li>Mengubah alur pemberkasan manual menjadi digital terintegrasi, meningkatkan efisiensi validasi data dan keamanan dokumen mahasiswa.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2024">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/aicanva1.png" alt="Doc 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/aicanva4.jpg" alt="Doc 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/aicanva2.jpg" alt="Doc 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/aicanva3.jpg" alt="Doc 4"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Program Pengabdian Implementasi AI Canva sebagai Media Pembelajaran Inovatif<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-chalkboard-user" style="margin-right:5px;"></i> AI Trainer | 2024<span class="cite"></span></span>
+                            <ul>
+                                <li>Memimpin pelatihan pemanfaatan fitur Generative AI pada platform Canva (seperti Magic Write dan Text-to-Image) untuk membantu para guru merancang materi ajar visual yang interaktif secara instan.<span class="cite"></span></li>
+                                <li>Meningkatkan kompetensi literasi digital tenaga pengajar dalam mengadopsi teknologi kecerdasan buatan, sehingga efisiensi pembuatan media pembelajaran meningkat signifikan.<span class="cite"></span></li>
+                                <li>Publikasi: <a href="https://journal.ubpkarawang.ac.id/index.php/AJPM/en/article/view/9281" target="_blank" rel="noopener">Jurnal Pengabdian Canva AI</a><span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2024">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/plat1.jpeg" alt="Data 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/plat2.png" alt="Data 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/plat3.png" alt="Data 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/plat4.jpg" alt="Data 4"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Deteksi dan Pengenalan Karakter Plat Nomor kendaraan<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-flask" style="margin-right:5px;"></i> Data Scientist | 2024<span class="cite"></span></span>
+                            <ul>
+                                <li>Mengembangkan sistem identifikasi kendaraan otomatis menggunakan OpenCV untuk mendeteksi dan mengisolasi area plat nomor dari citra mobil mentah.<span class="cite"></span></li>
+                                <li>Mengintegrasikan Tesseract OCR dan teknik segmentasi citra untuk mengubah gambar plat menjadi data teks digital secara otomatis, yang dapat diaplikasikan untuk pencatatan sistem parkir pintar atau e-tilang.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2024">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/pm1.png" alt="Data 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/pm2.png" alt="Data 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/pm6.png" alt="Data 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/pm4.png" alt="Data 4"></div>
+                                    <div class="carousel-slide"><img src="proyek/pm3.JPEG" alt="Data 5"></div>
+                                    <div class="carousel-slide"><img src="proyek/pm5.png" alt="Dats 6"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Sistem Pengiklanan Web UMKM (GEMURAI)<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-chalkboard-user" style="margin-right:5px;"></i> Project Manager | 2024<span class="cite"></span></span>
+                            <ul>
+                                <li>Memimpin pengembangan platform web GEMURAI menggunakan framework Agile Scrum untuk mendigitalisasi pemasaran dan pengelolaan data UMKM.<span class="cite"></span></li>
+                                <li>Merancang Entity Relationship Diagram (ERD) dan UI/UX antarmuka sistem untuk menciptakan platform pemasaran yang user-friendly, sehingga berpotensi memperluas jangkauan promosi para pelaku UMKM.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2024">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/telat1.png" alt="Data 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/telat8.png" alt="Data 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/telat3.png" alt="Data 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/telat2.png" alt="Data 4"></div>
+                                    <div class="carousel-slide"><img src="proyek/telat10.png" alt="Data 5"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Analisis Prediksi Keterlambatan Kelulusan Mahasiswa<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-flask" style="margin-right:5px;"></i> Data Scientist | 2024<span class="cite"></span></span>
+                            <ul>
+                                <li>Melakukan pemrosesan data dari dataset akademik yang mencakup lebih dari 250.000 data transkrip nilai dan 4.500 data lulusan.<span class="cite"></span></li>
+                                <li>Menganalisis korelasi fitur kritis terhadap durasi studi, meliputi variabel status pekerjaan (bekerja/tidak), demografi (usia & jenis kelamin), Program Studi, serta tren IP per Semester, untuk mengidentifikasi faktor risiko utama keterlambatan lulus.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2024">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/obes1.png" alt="Model 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/obes2.png" alt="Model 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/obes3.png" alt="Model 3"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Klasifikasi Tingkat Penyakit Obesitas Pada Populasi Dewasa<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-flask" style="margin-right:5px;"></i> Data Scientist Researcher | 2024<span class="cite"></span></span>
+                            <ul>
+                                <li>Menerapkan teknik preprocessing dengan penanganan missing value dan duplikat untuk membangun model klasifikasi risiko obesitas yang optimal menggunakan algoritma AdaBoost dan XGBoost.<span class="cite"></span></li>
+                                <li>Menganalisis interpretabilitas model untuk mengungkap bahwa Berat Badan dan Usia memiliki kontribusi tertinggi terhadap klasifikasi risiko, memberikan pemahaman pola kesehatan yang lebih konkret bagi pengambilan keputusan medis.<span class="cite"></span></li>
+                                <li>Publikasi: <a href="https://ejurnal.ung.ac.id/index.php/jji/article/view/27342" target="_blank" rel="noopener">Jurnal klasifikasi obesitas</a><span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2024">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/sentimenev1.png" alt="Data 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/sentimenev2.png" alt="Data 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/sentimenev5.png" alt="Data 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/sentimenev4.png" alt="Data 4"></div>
+                                    <div class="carousel-slide"><img src="proyek/sentimenev3.jpeg" alt="Data 5"></div>
+                                    <div class="carousel-slide"><img src="proyek/sentimenev6.jpeg" alt="Data 6"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Analisis Sentimen Publik terhadap Mobil Listrik<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-flask" style="margin-right:5px;"></i> Machine Learning Researcher | 2024<span class="cite"></span></span>
+                            <ul>
+                                <li>Melakukan pemrosesan data tekstual mulai dari crawling data, preprocessing komprehensif (cleaning, stemming, tokenization), hingga pembobotan kata dengan TF-IDF.<span class="cite"></span></li>
+                                <li>Membandingkan kinerja 6 algoritma Machine Learning (Naïve Bayes, SVM, KNN, Decision Tree, Random Forest, Logistic Regression) dan menentukan model terbaik untuk menghasilkan insight strategis mengenai preferensi dan kekhawatiran konsumen terhadap adopsi kendaraan listrik<span class="cite"></span></li>
+                                <li>Publikasi: <a href="https://jutif.if.unsoed.ac.id/index.php/jurnal/article/view/2141" target="_blank" rel="noopener">Jurnal sentimen analisis</a><span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-card reveal" data-year="2023">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/absen1.png" alt="Data 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/absen4.png" alt="Data 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/absen6.png" alt="Data 4"></div>
+                                    <div class="carousel-slide"><img src="proyek/absen2.png" alt="Data 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/absen5.png" alt="Data 5"></div>
+                                    <div class="carousel-slide"><img src="proyek/absen3.jpg" alt="Data 4"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Model Deteksi Wajah untuk Sistem Kehadiran Sekolah<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-flask" style="margin-right:5px;"></i> Data Scientist | 2023<span class="cite"></span></span>
+                            <ul>
+                                <li>Membangun model Deep Learning menggunakan algoritma Convolutional Neural Network (CNN) melalui optimasi layer (Conv2D, MaxPooling, Dropout) untuk mendeteksi dan mengenali wajah secara real-time.<span class="cite"></span></li>
+                                <li>Menerapkan otomasi pencatatan presensi digital berbasis Computer Vision dari tangkapan kamera langsung ke dalam format Excel untuk meminimalisir manipulasi data kehadiran.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2023">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/agenda2.png" alt="Web 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/agenda3.png" alt="Web 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/agenda5.png" alt="Web 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/agenda1.png" alt="Web 4"></div>
+                                    <div class="carousel-slide"><img src="proyek/agenda4.jpeg" alt="Web 5"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Sistem Penjadwalan Kegiatan UBP Karawang<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-laptop-code" style="margin-right:5px;"></i> Web Developer | 2023<span class="cite"></span></span>
+                            <ul>
+                                <li>Mengembangkan sistem sentralisasi penjadwalan kegiatan berbasis web yang kini digunakan lebih dari 50 pegawai untuk mengatasi masalah konflik jadwal di lingkungan Universitas.<span class="cite"></span></li>
+                                <li>Mengembangkan fitur Kalender Digital, membuat transparansi informasi dan sinkronisasi jadwal real-time.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2023">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/romawi1.png" alt="romawi 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/romawi2.png" alt="romawi 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/romawi3.png" alt="romawi 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/romawi4.jpg" alt="romawi 4"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Klasifikasi Citra Koin Romawi Kuno<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-flask" style="margin-right:5px;"></i> Data Scientist | 2023<span class="cite"></span></span>
+                            <ul>
+                                <li>Membangun model Support Vector Machine (SVM) untuk mendeteksi material koin dengan menerapkan teknik Pengolahan Citra Digital (PCD) yang meliputi Canny Edge, Gaussian Blur, dan ekstraksi HSV.<span class="cite"></span></li>
+                                <li>Menyediakan solusi pengenalan gambar yang efisien untuk membantu para peneliti dalam mengelompokkan artefak bersejarah.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2023">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/jastip1.png" alt="jastip 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/jastip2.png" alt="jastip 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/jastip3.png" alt="jastip 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/jastip4.jpg" alt="jastip 4"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Aplikasi Mobile Jasa Titip (Take It)<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-laptop-code" style="margin-right:5px;"></i> Backend Developer | 2023<span class="cite"></span></span>
+                            <ul>
+                                <li>Mengembangkan arsitektur backend dan RESTful API untuk mengintegrasikan manajemen basis data dengan antarmuka aplikasi mobile secara stabil dan aman.<span class="cite"></span></li>
+                                <li>Menerapkan metodologi Extreme Programming (XP) untuk mempercepat siklus pengembangan fitur, menciptakan platform transaksi jasa titip yang terpercaya dan efisien bagi pengguna.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2023">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/sampah1.png" alt="sampah 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/sampah2.png" alt="sampah 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/sampah3.png" alt="sampah 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/sampah4.png" alt="sampah 4"></div>
+                                    <div class="carousel-slide"><img src="proyek/sampah5.png" alt="sampah 5"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Perancangan Inovasi Sistem Pengolahan Limbah Terintegrasi (STAMPASTIK)<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-flask" style="margin-right:5px;"></i> Lead Researcher | 2023<span class="cite"></span></span>
+                            <ul>
+                                <li>Memimpin tim riset pada ajang Pekan Kreatifitas Mahasiswa (PKM) dalam merancang program Stasiun Pemanfaatan Sampah Plastik (STAMPASTIK), sebuah inovasi sistem tata kelola limbah plastik berskala daerah yang dikonversi menjadi bahan bakar alternatif melalui metode Pirolisis.<span class="cite"></span></li>
+                                <li>Menyusun peta jalan (roadmap) implementasi sistem STAMPASTIK dari tahap riset awal hingga operasional terpusat, sebagai rekomendasi strategis tata kelola lingkungan bagi pemerintah daerah.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2022">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/topup1.png" alt="topup 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/topup2.png" alt="topup 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/topup3.png" alt="topup 3"></div>
+                                    <div class="carousel-slide"><img src="proyek/topup4.png" alt="topup 4"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Sistem Informasi E-Commerce Produk Digital (Tokoku)<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-laptop-code" style="margin-right:5px;"></i> Web Developer | 2022<span class="cite"></span></span>
+                            <ul>
+                                <li>Membangun aplikasi e-commerce produk digital dengan struktur kode Object-Oriented Programming (OOP) untuk menciptakan platform transaksi top-up yang efisien, stabil, dan lancar bagi pengguna.<span class="cite"></span></li>
+                                <li>Mengintegrasikan algoritma Sequential Search untuk fitur pencarian pesanan, manajemen produk, serta riwayat transaksi pengguna untuk mengoptimalkan sistem pencarian antrean pesanan secara presisi.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal" data-year="2022">
+                        <div class="project-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="proyek/travel1.png" alt="travel 1"></div>
+                                    <div class="carousel-slide"><img src="proyek/travel2.png" alt="travel 2"></div>
+                                    <div class="carousel-slide"><img src="proyek/travel3.jpg" alt="travel 3"></div>
+                                </div>
+                                <button class="carousel-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="carousel-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Sistem Manajemen Pemesanan Travel<span class="cite"></span></h4>
+                            <span class="badge"><i class="fa-solid fa-laptop-code" style="margin-right:5px;"></i> Python Developer | 2022<span class="cite"></span></span>
+                            <ul>
+                                <li>Membangun aplikasi Command Line Interface (CLI) berbasis Python untuk sentralisasi pendataan peserta, pilihan paket, dan fasilitas travel.<span class="cite"></span></li>
+                                <li>Mengotomatisasi kalkulasi tarif pembayaran menggunakan struktur data dasar guna mempercepat proses registrasi dan meminimalisir human error.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="kepemimpinan">
-            <h2 class="section-title">Pengalaman Kepemimpinan</h2> <div class="leadership-grid">
-                <div class="leadership-item">
-                    <img src="6540b12d-f8e7-475a-8320-b713061ade54.jpg" alt="Foto BPROTIC">
-                    <h4>CTO divisi Design Engineering</h4> <p>Buana Perjuangan Robotic Club (BPROTIK)</p> </div>
-                <div class="leadership-item">
-                    <img src="IMG_0003 12R,.jpg" alt="Foto MPK SMAN 3 Karawang">
-                    <h4>Komisi Bidang 2 Kedisiplinan</h4> <p>Majelis Perwakilan Kelas (MPK) SMAN 3 Karawang (2019-2020)</p> </div>
-                <div class="leadership-item">
-                    <img src="IMG-20240305-WA0043.jpg" alt="Foto Paskibra SMAN 3 Karawang">
-                    <h4>Ketua Angkatan Paskibra</h4> <p>Pasukan Pengibar Bendera (Paskibra) SMAN 3 Karawang</p> </div>
+            <div class="container">
+                <h2 class="section-title reveal">Pengalaman Kepemimpinan<span class="cite"></span></h2>
+                <div class="grid-cards">
+                    <div class="lead-card reveal">
+                        <div class="lead-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="4000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="img/bprotic-1.jpg" alt="BPROTIK 1"></div>
+                                </div>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="lead-body">
+                            <h4>CTO Divisi Design Engineering<span class="cite"></span></h4>
+                            <span class="badge">BPROTIK UBP | Sep 2023 - Feb 2025<span class="cite"></span></span>
+                            <ul>
+                                <li>Memimpin divisi dalam merancang kurikulum pelatihan teknis serta membimbing anggota baru.<span class="cite"></span></li>
+                                <li>Bertindak sebagai Penjamin Mutu (QA) dan pemberi persetujuan akhir.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lead-card reveal">
+                        <div class="lead-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="4500">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="img/mpk-1.jpg" alt="MPK 1"></div>
+                                </div>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="lead-body">
+                            <h4>Komisi Bidang 2 Kedisiplinan<span class="cite"></span></h4>
+                            <span class="badge">MPK SMAN 3 | Sep 2019 - Sep 2020<span class="cite"></span></span>
+                            <ul>
+                                <li>Bertanggung jawab mengawasi, mengevaluasi, dan menegakkan tata tertib siswa.<span class="cite"></span></li>
+                                <li>Melakukan inspeksi atau razia kedisiplinan secara berkala.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lead-card reveal">
+                        <div class="lead-carousel-wrap">
+                            <div class="carousel-container" data-autoplay="true" data-interval="5000">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="img/paskibra-1.jpg" alt="Paskibra 1"></div>
+                                </div>
+                                <div class="carousel-indicators"></div>
+                            </div>
+                        </div>
+                        <div class="lead-body">
+                            <h4>Ketua Angkatan Paskibra<span class="cite"></span></h4>
+                            <span class="badge">SMAN 3 Karawang | Jun 2018 - Jun 2020<span class="cite"></span></span>
+                            <ul>
+                                <li>Memimpin dan bertanggung jawab memastikan kedisiplinan seluruh anggota angkatan.<span class="cite"></span></li>
+                                <li>Memimpin pelaksanaan kegiatan kaderisasi dan evaluasi.<span class="cite"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
     </main>
 
-    <footer id="kontak">
-        <h2 class="closing">SEKIAN TERIMA KASIH</h2> <ul class="contact-info">
-            <li>📞 +62 895 0951 8492</li> <li>✉️ rigger.damaiartat@gmail.com</li> <li>📍 Karawang, Jawa Barat</li> </ul>
-        </footer>
+    <footer>
+        <h2>Mari Terhubung</h2>
+            <i class="fa-solid fa-location-dot" style="color:var(--aksen)"></i> Karawang, Jawa Barat &nbsp;|&nbsp;
+            <i class="fa-solid fa-envelope" style="color:var(--aksen)"></i> rigger.damaiartat@gmail.com &nbsp;|&nbsp;
+            <a href="https://wa.me/6289509518492" target="_blank"><i class="fa-brands fa-whatsapp" style="color:var(--aksen)"></i> WhatsApp</a> &nbsp;|&nbsp;
+            <a href="https://linkedin.com/in/rigger-dt/" target="_blank"><i class="fa-brands fa-linkedin" style="color:var(--aksen)"></i> LinkedIn</a>
+        </p>
+    </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            /* --- MODAL --- */
+            const modal = document.getElementById('connectModal');
+            const openBtn = document.getElementById('openModalBtn');
+            const closeBtn = document.getElementById('closeModal');
+
+            openBtn.addEventListener('click', () => modal.classList.add('active'));
+            closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+            modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+
+            /* --- Modal Tema --- */
+            const themeModal = document.getElementById('themeModal');
+            const openThemeBtn = document.getElementById('openThemeModal');
+            const openThemeBtnMobile = document.getElementById('openThemeModalMobile');
+            const closeThemeBtn = document.getElementById('closeThemeModal');
+            const themeOptions = document.querySelectorAll('.theme-option');
+            const THEME_KEY = 'portfolio-theme';
+
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme === 'light' ? 'light' : 'dark');
+                try { localStorage.setItem(THEME_KEY, theme); } catch (e) {}
+                themeOptions.forEach(opt => {
+                    opt.classList.toggle('active', opt.getAttribute('data-theme') === theme);
+                });
+            }
+
+            const savedTheme = (function() {
+                try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
+            })();
+            applyTheme(savedTheme === 'light' ? 'light' : 'dark');
+
+            openThemeBtn.addEventListener('click', () => themeModal.classList.add('active'));
+            if (openThemeBtnMobile) {
+                openThemeBtnMobile.addEventListener('click', () => themeModal.classList.add('active'));
+            }
+            closeThemeBtn.addEventListener('click', () => themeModal.classList.remove('active'));
+            themeModal.addEventListener('click', (e) => { if (e.target === themeModal) themeModal.classList.remove('active'); });
+
+            themeOptions.forEach(opt => {
+                opt.addEventListener('click', () => {
+                    const theme = opt.getAttribute('data-theme');
+                    applyTheme(theme);
+                });
+            });
+
+            /* --- Sidebar nav (mobile) --- */
+            const navToggle = document.getElementById('navToggle');
+            const mobileSidebar = document.getElementById('mobileSidebar');
+            const closeSidebar = document.getElementById('closeSidebar');
+
+            function closeMobileSidebar() {
+                if (!mobileSidebar) return;
+                mobileSidebar.classList.remove('open');
+                mobileSidebar.setAttribute('aria-hidden', 'true');
+            }
+
+            if (navToggle && mobileSidebar) {
+                navToggle.addEventListener('click', () => {
+                    const isOpen = mobileSidebar.classList.contains('open');
+                    if (isOpen) {
+                        closeMobileSidebar();
+                    } else {
+                        mobileSidebar.classList.add('open');
+                        mobileSidebar.setAttribute('aria-hidden', 'false');
+                    }
+                });
+            }
+
+            if (closeSidebar) {
+                closeSidebar.addEventListener('click', closeMobileSidebar);
+            }
+
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMobileSidebar);
+            });
+
+            /* --- Nav scroll class --- */
+            const nav = document.getElementById('mainNav');
+            window.addEventListener('scroll', () => {
+                nav.classList.toggle('scrolled', window.scrollY > 40);
+            });
+
+            /* --- Scroll reveal --- */
+            const revealEls = document.querySelectorAll('.reveal');
+            const reveal = () => {
+                revealEls.forEach(el => {
+                    const top = el.getBoundingClientRect().top;
+                    const trigger = window.innerHeight * 0.85;
+                    if (top < trigger) el.classList.add('visible');
+                });
+            };
+            window.addEventListener('scroll', reveal);
+            reveal();
+
+            /* --- CAROUSEL --- */
+            const carousels = document.querySelectorAll('.carousel-container');
+
+            carousels.forEach(carousel => {
+                if (carousel.getAttribute('data-skip-init') === 'true') return;
+                const track = carousel.querySelector('.carousel-track');
+                const slides = Array.from(track.children);
+                if (slides.length <= 1) return;
+
+                const prevBtn = carousel.querySelector('.carousel-btn.prev');
+                const nextBtn = carousel.querySelector('.carousel-btn.next');
+                const indicatorContainer = carousel.querySelector('.carousel-indicators');
+                let currentIndex = 0;
+                let autoplayInterval;
+                const isAutoplay = carousel.getAttribute('data-autoplay') === 'true';
+                const intervalTime = parseInt(carousel.getAttribute('data-interval')) || 5000;
+
+                if (indicatorContainer) {
+                    slides.forEach((_, index) => {
+                        const dot = document.createElement('div');
+                        dot.classList.add('indicator');
+                        if (index === 0) dot.classList.add('active');
+                        dot.addEventListener('click', () => { goToSlide(index); resetAutoplay(); });
+                        indicatorContainer.appendChild(dot);
+                    });
+                }
+
+                function updateIndicators() {
+                    if (!indicatorContainer) return;
+                    indicatorContainer.querySelectorAll('.indicator').forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentIndex);
+                    });
+                }
+
+                function goToSlide(index) {
+                    currentIndex = index;
+                    if (currentIndex < 0) currentIndex = slides.length - 1;
+                    if (currentIndex >= slides.length) currentIndex = 0;
+                    track.style.transform = `translateX(${-currentIndex * 100}%)`;
+                    updateIndicators();
+                }
+
+                if (prevBtn) prevBtn.addEventListener('click', () => { goToSlide(currentIndex - 1); resetAutoplay(); });
+                if (nextBtn) nextBtn.addEventListener('click', () => { goToSlide(currentIndex + 1); resetAutoplay(); });
+
+                function startAutoplay() {
+                    if (isAutoplay) autoplayInterval = setInterval(() => goToSlide(currentIndex + 1), intervalTime);
+                }
+                function resetAutoplay() { clearInterval(autoplayInterval); startAutoplay(); }
+
+                carousel.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+                carousel.addEventListener('mouseleave', startAutoplay);
+                startAutoplay();
+            });
+
+            /* --- MODAL DETAIL GAMBAR PROYEK --- */
+            const proyekSection = document.getElementById('proyek');
+            const projectImageModal = document.getElementById('projectImageModal');
+            const projectImageModalTrack = document.getElementById('projectImageModalTrack');
+            const projectImageModalIndicators = document.getElementById('projectImageModalIndicators');
+            const closeProjectImageModalBtn = document.getElementById('closeProjectImageModal');
+            const projectImageModalPrevBtn = document.getElementById('projectImageModalPrev');
+            const projectImageModalNextBtn = document.getElementById('projectImageModalNext');
+
+            let projectModalIndex = 0;
+            let projectModalSlidesCount = 0;
+            let lastBodyOverflow = '';
+
+            function setProjectImageModalActive(active) {
+                if (!projectImageModal) return;
+                if (active) {
+                    lastBodyOverflow = document.body.style.overflow;
+                    document.body.style.overflow = 'hidden';
+                    projectImageModal.classList.add('active');
+                    projectImageModal.setAttribute('aria-hidden', 'false');
+                } else {
+                    projectImageModal.classList.remove('active');
+                    projectImageModal.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = lastBodyOverflow || '';
+                }
+            }
+
+            function updateProjectModalIndicators() {
+                if (!projectImageModalIndicators) return;
+                projectImageModalIndicators.querySelectorAll('.indicator').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === projectModalIndex);
+                });
+            }
+
+            function goToProjectModalSlide(index) {
+                if (projectModalSlidesCount <= 0) return;
+                projectModalIndex = index;
+                if (projectModalIndex < 0) projectModalIndex = projectModalSlidesCount - 1;
+                if (projectModalIndex >= projectModalSlidesCount) projectModalIndex = 0;
+                projectImageModalTrack.style.transform = `translateX(${-projectModalIndex * 100}%)`;
+                updateProjectModalIndicators();
+            }
+
+            function openProjectImageModal(projectCard, startIndex) {
+                if (!projectCard || !projectImageModalTrack) return;
+
+                const sourceCarousel = projectCard.querySelector('.project-carousel-wrap .carousel-container');
+                if (!sourceCarousel) return;
+
+                const sourceImgEls = Array.from(sourceCarousel.querySelectorAll('.carousel-slide img'));
+                if (sourceImgEls.length === 0) return;
+
+                const slides = sourceImgEls.map(img => ({
+                    src: img.getAttribute('src'),
+                    alt: img.getAttribute('alt') || ''
+                }));
+
+                projectModalSlidesCount = slides.length;
+                projectModalIndex = startIndex;
+                if (projectModalIndex < 0) projectModalIndex = 0;
+                if (projectModalIndex >= projectModalSlidesCount) projectModalIndex = projectModalSlidesCount - 1;
+
+                projectImageModalTrack.innerHTML = '';
+                slides.forEach(s => {
+                    const slide = document.createElement('div');
+                    slide.className = 'carousel-slide';
+                    const img = document.createElement('img');
+                    img.src = s.src;
+                    img.alt = s.alt;
+                    slide.appendChild(img);
+                    projectImageModalTrack.appendChild(slide);
+                });
+
+                projectImageModalIndicators.innerHTML = '';
+                slides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('indicator');
+                    if (index === projectModalIndex) dot.classList.add('active');
+                    dot.addEventListener('click', () => goToProjectModalSlide(index));
+                    projectImageModalIndicators.appendChild(dot);
+                });
+
+                projectImageModalTrack.style.transform = `translateX(${-projectModalIndex * 100}%)`;
+                setProjectImageModalActive(true);
+            }
+
+            function closeProjectImageModal() {
+                if (!projectImageModal || !projectImageModal.classList.contains('active')) return;
+                setProjectImageModalActive(false);
+                // Kosongkan agar tidak membawa state slide sebelumnya
+                if (projectImageModalTrack) projectImageModalTrack.innerHTML = '';
+                if (projectImageModalIndicators) projectImageModalIndicators.innerHTML = '';
+                projectModalSlidesCount = 0;
+                projectModalIndex = 0;
+            }
+
+            if (closeProjectImageModalBtn) {
+                closeProjectImageModalBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    closeProjectImageModal();
+                });
+            }
+
+            if (projectImageModalPrevBtn) {
+                projectImageModalPrevBtn.addEventListener('click', () => goToProjectModalSlide(projectModalIndex - 1));
+            }
+
+            if (projectImageModalNextBtn) {
+                projectImageModalNextBtn.addEventListener('click', () => goToProjectModalSlide(projectModalIndex + 1));
+            }
+
+            if (projectImageModal) {
+                projectImageModal.addEventListener('click', (e) => {
+                    if (e.target === projectImageModal) closeProjectImageModal();
+                });
+            }
+
+            document.addEventListener('keydown', (e) => {
+                const isOpen = projectImageModal && projectImageModal.classList.contains('active');
+                if (!isOpen) return;
+
+                if (e.key === 'Escape') closeProjectImageModal();
+                if (e.key === 'ArrowLeft') goToProjectModalSlide(projectModalIndex - 1);
+                if (e.key === 'ArrowRight') goToProjectModalSlide(projectModalIndex + 1);
+            });
+
+            if (proyekSection) {
+                proyekSection.addEventListener('click', (e) => {
+                    const imgEl = e.target.closest('.project-carousel-wrap .carousel-slide img');
+                    if (!imgEl) return;
+
+                    const projectCard = imgEl.closest('.project-card');
+                    if (!projectCard) return;
+
+                    const trackEl = projectCard.querySelector('.project-carousel-wrap .carousel-track');
+                    const slideEl = imgEl.closest('.carousel-slide');
+                    if (!trackEl || !slideEl) return;
+
+                    const slides = Array.from(trackEl.children);
+                    const startIndex = slides.indexOf(slideEl);
+
+                    openProjectImageModal(projectCard, startIndex);
+                });
+            }
+
+            /* --- FILTER PROYEK BERDASARKAN TAHUN --- */
+            const yearFilterButtons = document.querySelectorAll('.year-filter-btn');
+            const projectCards = document.querySelectorAll('#proyek .project-card');
+
+            function applyProjectFilter(year) {
+                projectCards.forEach(card => {
+                    const cardYear = card.getAttribute('data-year');
+                    if (year === 'all' || cardYear === year) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            yearFilterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const selectedYear = btn.getAttribute('data-year');
+
+                    yearFilterButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    applyProjectFilter(selectedYear);
+                });
+            });
+
+            // Default: tampilkan semua proyek saat halaman dimuat
+            applyProjectFilter('all');
+        });
+    </script>
 </body>
 </html>
