@@ -1160,11 +1160,35 @@
             .hero-content p { margin: 0 auto 28px auto; max-width: 100%; }
 
             .project-card { flex-direction: column; }
+            /* Di kolom, basis 44% mengacu ke tinggi — reset agar lebar penuh & tinggi mengikuti gambar */
             .project-carousel-wrap {
+                flex: none;
+                width: 100%;
                 max-width: 100%;
                 border-right: none;
                 border-bottom: 1px solid var(--garis);
-                height: 260px;
+                height: auto;
+                min-height: 0;
+            }
+            .project-carousel-wrap .carousel-container {
+                height: auto;
+            }
+            .project-carousel-wrap .carousel-track {
+                align-items: flex-start;
+            }
+            .project-carousel-wrap .carousel-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 0;
+            }
+            .project-carousel-wrap .carousel-slide img {
+                max-width: 100%;
+                max-height: min(72vh, 560px);
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                object-position: center;
             }
         }
 
