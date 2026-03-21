@@ -1174,7 +1174,7 @@
                 height: auto;
             }
             .project-carousel-wrap .carousel-track {
-                align-items: flex-start;
+                align-items: center;
             }
             .project-carousel-wrap .carousel-slide {
                 display: flex;
