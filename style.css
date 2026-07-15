@@ -1193,6 +1193,8 @@
         }
 
         @media (max-width: 768px) {
+            html { scrollbar-width: none; }
+            html::-webkit-scrollbar { display: none; }
             nav { padding: 14px 5%; }
             /* Di mobile: pakai sidebar, bukan menu horisontal */
             .nav-toggle { display: flex; }
@@ -1204,4 +1206,3 @@
             .timeline-header-block { flex-direction: column; gap: 10px; }
             .cert-link { opacity: 1; transform: translateX(0); }
         }
-
